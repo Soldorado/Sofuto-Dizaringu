@@ -8,69 +8,74 @@ Comenzo siendo un fork de onebitdithertool. con la diferencia de que este soport
 ## Características
 - Soporte de multiples estilos de colores en paleta. paletas por el autor sol dorado 8
 -   Web
-    Commodore 64
-    ZX Spectrum
-	  Macintosh
-    Atari ST 512 colores
-    Pc-88 512 colores
-	  Pc-98 256 colores
-	  Sharp MZ-800
-    Sharp X68000 256 colores
-	  Sharp X68000 512 colores
-    Sharp PC-1210
-    Sharp PC-1350
-	  Sharp PC-1401
-    Sharp PC-E500S
-    Sharp MZ-80B
-	  Sharp MZ-80B lavanda
-    Sharp MZ-6500
-    Sharp X1
-	  Sharp PC-7000
-    NEC PC-9801LS
-    NEC PC-6001
-    Hewlett Packard Model 85
-    Amiga 1000 OCS
-    Amiga 1000 HAM
-	  Zenith Z-171 PC
-    AT&T UNIX PC
-    Linus Write-Top
-    GRiDPad
-    NCR-3125
-    IBM ThinkPad 710T
-    Apple Newton H1000
-    Zeos Pocket PC
-    Atari 2600 NTSC
-    Atari 2600 Pal
-    Game Boy Original
-    Game Boy Pocket Light
-    Game Boy Light
-	  Game Boy Light Backlit
-    Nes
-	  Super Nintendo 16 colores
-    Super Nintendo 125 colores
-    Super Nintendo 256 colores
-	  Game Boy Color Brown
-    Game Boy Color Pale yellow
-    Game Boy Color Blue
-	  Game Boy Color Green
-    Game Boy Color Red
-	  Game Boy Color Orange
-	  Game Boy Color Dark blue
-	  Game Boy Color Dark green
-	  Game Boy Color Dark brown
-	  Game Boy Color Yellow
-	  Game Boy Color Gray
-	  Game Boy Color Reverse
-	  Sega Master System
-    Sega Mega drive
-    Fairchild Channel F
-	  Virtual boy
-	  Motorola International 3200
-	  Nokia 2110
-	  Nokia 6510
-	  NEC E616 tape
-	  NEC 9A
+-   Commodore 64
+-   ZX Spectrum
+-   Macintosh
+-   Atari ST 512 colores
+-   Pc-88 512 colores
+-   Pc-98 256 colores
+-   Sharp MZ-800
+-   Sharp X68000 256 colores
+-   Sharp X68000 512 colores
+-   Sharp PC-1210
+-   Sharp PC-1350
+-   Sharp PC-1401
+-   Sharp PC-E500S
+-   Sharp MZ-80B
+-   Sharp MZ-80B lavanda
+-   Sharp MZ-6500
+-   Sharp X1
+-   Sharp PC-7000
+-   NEC PC-9801LS
+-   NEC PC-6001
+-   Hewlett Packard Model 85
+-   Amiga 1000 OCS
+-   Amiga 1000 HAM
+-   Zenith Z-171 PC
+-   AT&T UNIX PC
+-   Linus Write-Top
+-   GRiDPad
+-   NCR-3125
+-   IBM ThinkPad 710T
+-   Apple Newton H1000
+-   Zeos Pocket PC
+-   Atari 2600 NTSC
+-   Atari 2600 Pal
+-   Game Boy Original
+-   Game Boy Pocket Light
+-   Game Boy Light
+-   Game Boy Light Backlit
+-   Nes
+-   Super Nintendo 16 colores
+-   Super Nintendo 125 colores
+-   Super Nintendo 256 colores
+-   Game Boy Color Brown
+-   Game Boy Color Pale yellow
+-   Game Boy Color Blue
+-   Game Boy Color Green
+-   Game Boy Color Red
+-   Game Boy Color Orange
+-   Game Boy Color Dark blue
+-   Game Boy Color Dark green
+-   Game Boy Color Dark brown
+-   Game Boy Color Yellow
+-   Game Boy Color Gray
+-   Game Boy Color Reverse
+-   Sega Master System
+-   Sega Mega drive
+-   Fairchild Channel F
+-   Virtual boy
+-   Motorola International 3200
+-   Nokia 2110
+-   Nokia 6510
+-   NEC E616 tape
+-   NEC 9A
 
+
+
+
+
+## Tramados/Matrixs
 - Admite todos los algoritmos de tramado proporcionados por didder:
 - Tramado Bayer
 - 2x2, 3x3, 3x5, 5x3, 4x4, 8x8, 16x16, 32x32, 64x64, tamaño personalizado
@@ -89,7 +94,7 @@ Comenzo siendo un fork de onebitdithertool. con la diferencia de que este soport
 
 ## Cómo usar
 - Descarga y instala Sofuto Dizaringu de la sección [Releases](https://github.com/timheigames/Sofuto-Dizaringu/releases).
-- Ejecuta la aplicación con `Dizaringu.exe`, o `Dizaringu.bat` 
+- Ejecuta la aplicación con `Dizaringu.exe`, o `Dizaringu_No_Netframework.bat` 
 - Puedes arrastrar una sola imagen o una carpeta a la ventana, o usar el explorador de archivos. (Se admiten archivos .png, .jpg y .jpeg).
 - Al arrastrar una carpeta, se buscarán todos los archivos .png, .jpg y .jpeg. El resto de archivos se ignorarán.
 - Al usar el explorador de archivos, puede seleccionar varios archivos con CTRL+Clic o MAYÚS+Clic. Debe hacer clic en «Aceptar» para cargar los archivos; el doble clic no  funciona.
