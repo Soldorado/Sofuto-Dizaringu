@@ -102,6 +102,3 @@ Comenzo siendo un fork de onebitdithertool. con la diferencia de que este soport
 - Cuando esté satisfecho con los resultados, haga clic en «Guardar todo». Esto procesará todas las imágenes cargadas, les aplicará el mismo tramado y, a continuación, las - - copiará a la carpeta «output» del directorio de Sofuto Dizaringu. Las imágenes de salida siempre son archivos .png.
 - puedes utilizar multiples paletas y combinarlas juntas.
 
-
-
-- You will get a notification that the app is from an unidentified developer, click Ok.
