@@ -1,56 +1,107 @@
-# OneBitDitherTool
-A 1-bit dithering tool written in [Love2D](https://love2d.org/). It currently supports Windows, Linux and macOS. This tool relies on the command line dithering tool [didder](https://github.com/makeworld-the-better-one/didder), command line image editor [ImageMagick](https://imagemagick.org/index.php), as well as the Lua libraries [Slab](https://github.com/flamendless/Slab) and [nativeFS](https://github.com/EngineerSmith/nativefs).
-
-![UI_example_image](https://user-images.githubusercontent.com/102014001/165626507-634bcc2a-2d00-4f4f-925f-5c749f3a3a26.png)
-
-## Features
-- Supports all dithering algorithms provided by didder:
-  - Bayer dithering
-    - 2x2, 3x3, 3x5, 5x3, 4x4, 8x8, 16x16, 32x32, 64x64, custom size
-  - Ordered dithering
-    - Vertical5x3, Horizontal3x5, ClusteredDotVerticalLine, ClusteredDotHorizontalLine, ClusteredDot4x4, ClusteredDotSpiral5x5, ClusteredDot6x6, ClusteredDotDiagonal6x6, ClusteredDot8x8, ClusteredDotDiagonal8x8, ClusteredDotDiagonal16x16
-  - Error diffusion dithering
-    - Simple2D, FloydSteinberg, FalseFloydSteinberg, JarvisJudiceNinke, Atkinson, Stucki, Burkes, Sierra, TwoRowSierra, SierraLite, StevenPigeon
-  - Random noise dithering
-- Fine control over dither strength, image brightness, and image contrast with real-time updates in the preview window.
-- Modify RGB channel multipliers before image is converted to grayscale.
-- Multiple ways to open files. You can drag a single image into the window, drag a folder into the window to load multiple images, or use a file browser to open one or more images (select multiple with ctrl or shift click).
-- Dither many images at the same time, with the same settings.
-- Resize the image before dithering is applied.
-- A toggle button to show the original image for making comparisons.
-
-## How to use
-- Download and extract OneBitDitherTool from the [Releases](https://github.com/timheigames/onebitdithertool/releases) section.
-- Run the app by using `Run_OneBitDitherTool_Windows.bat`, `Run_OneBitDitherTool_Linux.sh` or `Run_OneBitDitherTool_macOS.sh`. For macOS, you must install the prerequisites [below](https://github.com/timheigames/onebitdithertool/edit/main/README.md#macos-prerequisites).
-- You can drag a single image into the window, drag a folder into the window, or use the file browser. (.png, .jpg, .jpeg are supported)
-  - Dragging a folder will scan through the folder and find all .png, .jpg, and .jpeg files. Any other files will be ignored.
-  - While using the file browser, you can select multiple files using CTRL+Click or SHIFT+Click. You must click "OK" to load the files, double clicking does not work.
-- If you have loaded multiple images, you can change the preview image with Left Arrow and Right Arrow.
-- You can use left mouse to click and drag the image around. Mouse wheel will zoom the image at integer scales.
-- You can resize the image before dithering is applied with the scale slider.
-- By enabling "Split Channels", you can modify the RGB multipliers for the grayscale image. Note: This option will slow down performance in some cases.
-- Adjust Strength, Brightness, and Contrast sliders with the mouse. Clicking the name of the slider will reset to the default value.
-- Select a Dither Type in the drop down menu. Each dither type will have different settings available.
-- When you are happy with the results, click "Save All To Output Folder". This will iterate through all of the loaded images, apply the same dithering to each one, and then copy the images to the "output" folder in the OneBitDitherTool directory. Output images are always .png files.
+# Sofuto Dizaringu
+Comenzo siendo un fork de onebitdithertool. con la diferencia de que este soporta paletas de multiples colores. en differentes estilos. que van desde ordenadores antiguos. consolas. hasta paletas de telefonos moviles retro. 
 
 
-## macOS prerequisites
-The app requires `lua`, the love2d framework and the `didder` app. Those are easily installed via [homebrew](https://brew.sh).
+<img width="1360" height="768" alt="Dizaringu" src="https://github.com/user-attachments/assets/60549abe-1f5d-4412-b6b2-0ae9cbecb382" />
 
-- Open a terminal window and install homebrew by typing `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`.
-- Install `lua` by typing `brew install lua`.
-- Install the love2d framework by typing `brew install love`.
-- Add a cask for the developer of `didder` by typing `brew tap makeworld-the-better-one/tap`.
-- Install the `didder` command line tool by typing `brew install didder`.
 
-If you wish to use split RGB channel tweaking, you will also need `imageMagick`:
+## Características
+- Soporte de multiples estilos de colores en paleta. paletas por el autor sol dorado 8
+-   Web
+    Commodore 64
+    ZX Spectrum
+	  Macintosh
+    Atari ST 512 colores
+    Pc-88 512 colores
+	  Pc-98 256 colores
+	  Sharp MZ-800
+    Sharp X68000 256 colores
+	  Sharp X68000 512 colores
+    Sharp PC-1210
+    Sharp PC-1350
+	  Sharp PC-1401
+    Sharp PC-E500S
+    Sharp MZ-80B
+	  Sharp MZ-80B lavanda
+    Sharp MZ-6500
+    Sharp X1
+	  Sharp PC-7000
+    NEC PC-9801LS
+    NEC PC-6001
+    Hewlett Packard Model 85
+    Amiga 1000 OCS
+    Amiga 1000 HAM
+	  Zenith Z-171 PC
+    AT&T UNIX PC
+    Linus Write-Top
+    GRiDPad
+    NCR-3125
+    IBM ThinkPad 710T
+    Apple Newton H1000
+    Zeos Pocket PC
+    Atari 2600 NTSC
+    Atari 2600 Pal
+    Game Boy Original
+    Game Boy Pocket Light
+    Game Boy Light
+	  Game Boy Light Backlit
+    Nes
+	  Super Nintendo 16 colores
+    Super Nintendo 125 colores
+    Super Nintendo 256 colores
+	  Game Boy Color Brown
+    Game Boy Color Pale yellow
+    Game Boy Color Blue
+	  Game Boy Color Green
+    Game Boy Color Red
+	  Game Boy Color Orange
+	  Game Boy Color Dark blue
+	  Game Boy Color Dark green
+	  Game Boy Color Dark brown
+	  Game Boy Color Yellow
+	  Game Boy Color Gray
+	  Game Boy Color Reverse
+	  Sega Master System
+    Sega Mega drive
+    Fairchild Channel F
+	  Virtual boy
+	  Motorola International 3200
+	  Nokia 2110
+	  Nokia 6510
+	  NEC E616 tape
+	  NEC 9A
 
-- Install the imageMagick command line tool by typing `brew install imagemagick`.
+- Admite todos los algoritmos de tramado proporcionados por didder:
+- Tramado Bayer
+- 2x2, 3x3, 3x5, 5x3, 4x4, 8x8, 16x16, 32x32, 64x64, tamaño personalizado
+- Actualizado. a diferencia de onebitdithertool el bayer personalizado soporta de 1x1 hasta 256x256
+- Tramado ordenado
+- Vertical5x3, Horizontal3x5, LíneaVerticalAgrupada, LíneaHorizontalAgrupada, PuntosAgrupados4x4, EspiralAgrupada5x5, PuntosAgrupados6x6, PuntosAgrupadosDiagonal6x6, PuntosAgrupados8x8, PuntosAgrupadosDiagonal8x8, PuntosAgrupadosDiagonal16x16
+- Tramado de difusión de error
+- Simple2D, FloydSteinberg, FalseFloydSteinberg, JarvisJudiceNinke, Atkinson, Stucki, Burkes, Sierra, TwoRowSierra, SierraLite StevenPigeon
+- Tramado de ruido aleatorio
+- Control preciso de la intensidad del tramado, el brillo y el contraste de la imagen con actualizaciones en tiempo real en la ventana de vista previa.
+- Modifica los multiplicadores de los canales RGB antes de convertir la imagen a escala de grises.
+- Múltiples formas de abrir archivos. Puedes arrastrar una sola imagen a la ventana, arrastrar una carpeta para cargar varias imágenes o usar un explorador de archivos para abrir una o más imágenes (selecciona varias con Ctrl o Mayús + clic).
+- Tramado de varias imágenes simultáneamente con la misma configuración.
+- Redimensiona la imagen antes de aplicar el tramado.
+- Botón para mostrar la imagen original y realizar comparaciones.
 
-Unfortunately the love2d framework is not code-signed correctly so if you have the standard security settings, you will need to tell macOS to ignore that when using it.
+## Cómo usar
+- Descarga y instala Sofuto Dizaringu de la sección [Releases](https://github.com/timheigames/Sofuto-Dizaringu/releases).
+- Ejecuta la aplicación con `Dizaringu.exe`, o `Dizaringu.bat` 
+- Puedes arrastrar una sola imagen o una carpeta a la ventana, o usar el explorador de archivos. (Se admiten archivos .png, .jpg y .jpeg).
+- Al arrastrar una carpeta, se buscarán todos los archivos .png, .jpg y .jpeg. El resto de archivos se ignorarán.
+- Al usar el explorador de archivos, puede seleccionar varios archivos con CTRL+Clic o MAYÚS+Clic. Debe hacer clic en «Aceptar» para cargar los archivos; el doble clic no  funciona.
+- Si ha cargado varias imágenes, puede cambiar la vista previa con las flechas izquierda y derecha.
+- Puede usar el botón izquierdo del ratón para hacer clic y arrastrar la imagen. La rueda del ratón permite hacer zoom en escalas enteras.
+- Puede cambiar el tamaño de la imagen antes de aplicar el tramado con el control deslizante de escala.
+- Al activar «Dividir canales», puede modificar los multiplicadores RGB de la imagen en escala de grises. Nota: Esta opción puede ralentizar el rendimiento en algunos casos.
+- Ajuste los controles deslizantes de Intensidad, Brillo y Contraste con el ratón. Al hacer clic en el nombre del control deslizante, se restablecerá el valor predeterminado.
+- Seleccione un tipo de tramado en el menú desplegable. Cada tipo de tramado tiene diferentes opciones de configuración.
+- Cuando esté satisfecho con los resultados, haga clic en «Guardar todo». Esto procesará todas las imágenes cargadas, les aplicará el mismo tramado y, a continuación, las - - copiará a la carpeta «output» del directorio de Sofuto Dizaringu. Las imágenes de salida siempre son archivos .png.
+- puedes utilizar multiples paletas y combinarlas juntas.
 
-- Go to `Applications`, right click on `Love` then select Open.
-- You will get a notification that the app is from an unidentified developer, click Ok and close the `Love` app.
-- In the finder menu open click on Go->Open Folder and type `/opt/homebrew/bin/`
-- Right click on `love` then select Open.
+
+
 - You will get a notification that the app is from an unidentified developer, click Ok.
