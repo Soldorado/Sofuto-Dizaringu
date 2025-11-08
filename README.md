@@ -2,7 +2,8 @@
 Comenzo siendo un fork de onebitdithertool. con la diferencia de que este soporta paletas de multiples colores. en differentes estilos. que van desde ordenadores antiguos. consolas. hasta paletas de telefonos moviles retro. 
 
 
-<img width="1360" height="768" alt="Dizaringu" src="https://github.com/user-attachments/assets/60549abe-1f5d-4412-b6b2-0ae9cbecb382" />
+<img width="1360" height="768" alt="Dizaringu" src="https://github.com/user-attachments/assets/a6f04cc9-e56c-4752-bf1b-c7750a27b946" />
+
 
 
 ## Características
