@@ -82,7 +82,7 @@ PalettesMap = {
     ['Game Boy Color Blue'] = '003273 0060A9 368CB8 98B2C4',
 	['Game Boy Color Green'] = '296338 52945D 7AB482 B6D0B4',
     ['Game Boy Color Red'] = '6B0727 C63E48 E1A3A3 F5C6C6',
-	['Game Boy Color Orange'] = '551B13 8A4E21 B77636 D9AA71Dark blue',
+	['Game Boy Color Orange'] = '551B13 8A4E21 B77636 D9AA71',
 	['Game Boy Color Dark blue'] = '272B4D 464E8C 7882BB B9C1D9',
 	['Game Boy Color Dark green'] = '384A28 668846 95B468 C4D89A',
 	['Game Boy Color Dark brown'] = '23241D 484A3B 707469 9B9FA2',
@@ -276,7 +276,7 @@ function love.update(dt)
 
     Slab.Separator({H = 20})
 
-    if Slab.CheckBox(SplitChannelEnabled, "Canales divididos en 2 colores") then
+    if Slab.CheckBox(SplitChannelEnabled, "Mezclador. Solo 2 colores") then
         SplitChannelEnabled = not SplitChannelEnabled
         if SplitChannelEnabled and PreviewImage then
             SplitChannel()
@@ -747,7 +747,7 @@ function DitherImage()
     local currentPaletteString = PalettesMap[paletteName] or PalettesMap['Game Boy Original']
 	
     local cmdString = [[""]] .. love.filesystem.getSource() ..
-    [[/didder_win64" ]] .. scaleString ..
+    [[/didder" ]] .. scaleString ..
     [[ --palette "]] .. currentPaletteString .. [[" -i ]] ..
     inputString .. [[ -o "]] ..
     love.filesystem.getSource() .. [[/cache/temp.png"]] ..
